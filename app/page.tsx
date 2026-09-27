@@ -1,101 +1,106 @@
-import Link from 'next/link';
+'use client';
+import React from 'react';
 
-export default function Home() {
+export default function EgesanKalip() {
   return (
-    <div className="min-h-screen bg-[#050505] text-slate-300 font-sans selection:bg-cyan-500/30 flex flex-col justify-between">
-      
-      <div>
-        {/* ÜST MENÜ (NAVBAR) - SİBER TARZ */}
-        <nav className="flex items-center justify-between px-8 py-6 border-b border-white/10 bg-black/50 backdrop-blur-md">
+    <main className="min-h-screen bg-[#0a0a0a] text-slate-300 font-sans selection:bg-orange-500 selection:text-white">
+      {/* ÜST MENÜ (NAVBAR) */}
+      <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between text-xs font-mono tracking-widest">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-cyan-700 rounded-sm flex items-center justify-center font-bold text-xs tracking-tighter text-white">
-              EK
-            </div>
-            <div className="text-2xl font-extrabold tracking-widest text-slate-100">
-              EGSEN<span className="text-cyan-500">.KALIP</span>
-            </div>
+            <span className="bg-orange-600 text-white px-2 py-1 font-bold">EK</span>
+            <span className="text-white font-bold tracking-[0.2em]">EGSEN.KALIP</span>
           </div>
-          <div className="hidden md:flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
-            <Link href="#" className="hover:text-cyan-400 transition">Hakkımızda</Link>
-            <Link href="#" className="hover:text-cyan-400 transition">Makina Parkuru</Link>
-            <Link href="#" className="hover:text-cyan-400 transition">Üretim</Link>
+          <div className="hidden md:flex gap-8 text-gray-400">
+            <a href="#hakkimizda" className="hover:text-orange-500 transition-colors">HAKKIMIZDA</a>
+            <a href="#makina" className="hover:text-orange-500 transition-colors">MAKİNA PARKURU</a>
+            <a href="#uretim" className="hover:text-orange-500 transition-colors">ÜRETİM</a>
           </div>
-          <div className="flex items-center gap-2 text-xs font-bold text-green-500 tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            SİSTEM AKTİF
-          </div>
-        </nav>
-
-        {/* ANA VİTRİN (HERO SECTION) */}
-        <main className="max-w-6xl mx-auto px-8 py-20 flex flex-col items-center text-center gap-8 mt-4">
-          
-          {/* Üst Etiket */}
-          <div className="inline-block px-4 py-1.5 border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 font-bold text-xs tracking-[0.3em] uppercase rounded-sm">
-            [ EGSEN KALIP MÜHENDİSLİK ]
-          </div>
-          
-          {/* Ana Başlık */}
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white drop-shadow-lg">
-            Kusursuz Üretim. <br/>
-            <span className="text-cyan-500">Mutlak Hassasiyet.</span>
-          </h1>
-          
-          <p className="text-sm md:text-base text-slate-400 max-w-2xl leading-relaxed tracking-wide">
-            Gaziantep'ten dünyaya açılan ağır sanayi gücü. Alman disiplini ve Japon teknolojisiyle donatılmış, sıfır hata toleranslı CNC ve kalıp operasyonları.
-          </p>
-
-          {/* YANIP SÖNEN GLOW BUTONLAR */}
-          <div className="flex gap-6 mt-4">
-            <button className="px-8 py-4 bg-cyan-950/40 border border-cyan-500 text-cyan-400 font-bold text-sm tracking-widest uppercase hover:bg-cyan-900/60 transition shadow-[0_0_15px_rgba(6,182,212,0.4)] animate-pulse">
-              ÜRETİMİ İNCELE
-            </button>
-            <button className="px-8 py-4 bg-transparent border border-slate-700 text-slate-300 font-bold text-sm tracking-widest uppercase hover:bg-slate-800 transition">
-              MAKİNA PARKURU
-            </button>
-          </div>
-
-          {/* VİDEO ALANI (DeepNode Tarzı) */}
-          <div className="w-full max-w-4xl mt-16 aspect-video bg-[#0a0a0a] border border-slate-800 rounded-xl relative overflow-hidden flex items-center justify-center group shadow-2xl shadow-cyan-900/20">
-             
-             {/* Hafif Karartma Efekti */}
-             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-black/40 to-black opacity-80 z-10 pointer-events-none"></div>
-             
-             {/* Play Butonu */}
-             <div className="w-20 h-20 bg-cyan-500/20 border border-cyan-500 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition duration-300 cursor-pointer shadow-[0_0_30px_rgba(6,182,212,0.3)] z-20">
-                <div className="w-0 h-0 border-t-8 border-t-transparent border-l-[12px] border-l-cyan-400 border-b-8 border-b-transparent ml-1"></div>
-             </div>
-             
-             {/* Sol Alt Yazı */}
-             <div className="absolute bottom-4 left-4 text-xs font-mono text-cyan-500/50 tracking-widest z-20">
-               WATCH_FACTORY_TOUR_V1.mp4
-             </div>
-
-             {/* EFSANE KALIP VİDEOSU */}
-             <video 
-               src="/kalip.mp4" 
-               autoPlay 
-               loop 
-               muted 
-               playsInline 
-               className="absolute inset-0 w-full h-full object-cover opacity-70 mix-blend-screen"
-             ></video>
-          </div>
-        </main>
-      </div>
-
-      {/* SİBER ADRES ALANI (FOOTER) */}
-      <footer className="w-full border-t border-white/10 mt-24 py-8 px-8 bg-[#020202]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-mono tracking-widest text-slate-500">
-          <div className="text-cyan-500 font-bold text-sm">
-            EGSEN KALIP MÜHENDİSLİK
-          </div>
-          <div className="text-center md:text-right leading-relaxed uppercase">
-            Busem Sanayi Sitesi, Taşlıca E 90 27660<br/>
-            H Blok No:8 Şehitkamil / GAZİANTEP
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <span className="text-green-500 uppercase">Üretim Aktif</span>
           </div>
         </div>
+      </nav>
+
+      {/* ANA VİTRİN (HERO) - AĞIR SANAYİ MESAJI */}
+      <section className="relative pt-40 pb-20 px-6 flex flex-col items-center text-center">
+        <div className="inline-block border border-orange-500/30 bg-orange-500/10 px-4 py-1 rounded text-orange-500 font-mono text-xs tracking-widest mb-8 uppercase">
+          [ Egsen Kalıp Mühendislik ]
+        </div>
+        
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+          Kusursuz Üretim. <br />
+          <span className="text-orange-500">Mutlak Hassasiyet.</span>
+        </h1>
+        
+        <p className="max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed mb-10">
+          Gaziantep'ten dünyaya açılan ağır sanayi gücü. İleri mühendislik standartları ve yüksek teknolojiyle donatılmış, sıfır hata toleranslı CNC ve kalıp operasyonları.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 font-mono text-sm">
+          <button className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold transition-all border border-orange-500 uppercase tracking-widest">
+            Üretimi İncele
+          </button>
+          <button className="px-8 py-4 bg-transparent hover:bg-white/5 text-white border border-white/20 transition-all uppercase tracking-widest">
+            Makina Parkuru
+          </button>
+        </div>
+      </section>
+
+      {/* VİDEO ALANI - CNC VE İŞÇİLİK ŞOVU */}
+      <section className="relative w-full max-w-5xl mx-auto px-6 mb-24">
+        <div className="relative aspect-video bg-[#111] border border-white/10 p-2 rounded-sm shadow-2xl shadow-orange-900/10">
+          {/* Çerçeve İçi Tasarım */}
+          <div className="absolute inset-0 z-10 pointer-events-none border border-orange-500/20 m-2"></div>
+          
+          {/* VİDEO KODU (İsmini public klasöründeki video adına göre değiştirebilirsin) */}
+          <video 
+            className="w-full h-full object-cover opacity-90"
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            src="/WATCH_FACTORY_TOUR_V1.mp4" 
+          >
+          </video>
+          
+          {/* Video Üstü Teknik Detay HUD */}
+          <div className="absolute top-6 left-6 z-20 font-mono text-[10px] text-orange-500 tracking-widest flex flex-col gap-1 bg-black/60 p-2 rounded">
+            <span>REC // CNC_MILLING_01</span>
+            <span>TOLERANCE: ±0.001mm</span>
+          </div>
+        </div>
+      </section>
+
+      {/* İHRACAT VİZYONU */}
+      <section className="border-t border-white/10 bg-[#0a0a0a] py-24 text-center px-6">
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Gaziantep'ten Dünyaya</h2>
+        <h3 className="text-xl md:text-2xl text-gray-500 font-light mb-8">Küresel Standartlarda Üretim</h3>
+        <p className="max-w-3xl mx-auto text-gray-400 font-mono text-sm border border-white/10 p-6 bg-black/50 leading-loose">
+          Yüksek hassasiyetli CNC işleme, endüstriyel kalıp tasarımı ve uluslararası normlara uygun sıfır kayıp üretim orkestrasyonu.
+        </p>
+      </section>
+
+      {/* ALT BİLGİ (FOOTER) - İLETİŞİM */}
+      <footer className="border-t border-white/10 bg-black py-12 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8 font-mono text-xs text-gray-500">
+          
+          {/* İletişim Bilgileri */}
+          <div className="flex flex-col gap-1 text-left border-l-2 border-orange-500 pl-4">
+            <span className="text-white font-bold text-sm mb-2">EGSEN KALIP MÜHENDİSLİK</span>
+            <span className="text-orange-400 font-bold text-sm">EYÜP AYTAÇ</span>
+            <span className="text-gray-300 text-sm">0537 254 1947</span>
+          </div>
+
+          {/* Adres */}
+          <div className="text-left md:text-right">
+            <p className="mb-1">BUSEM SANAYİ SİTESİ, TAŞLICA E 90 27660</p>
+            <p>H BLOK NO:8 ŞEHİTKAMİL / GAZİANTEP</p>
+          </div>
+
+        </div>
       </footer>
-      
-    </div>
+    </main>
   );
 }
