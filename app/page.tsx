@@ -50,7 +50,6 @@ export default function EgsenKalip() {
         <div className="relative aspect-video bg-[#111] border border-white/10 p-2 rounded-sm shadow-2xl shadow-orange-900/10 overflow-hidden">
           <div className="absolute inset-0 z-10 pointer-events-none border border-orange-500/20 m-2"></div>
           
-          {/* Arka planda senin public klasöründeki kalip.mp4 çalışıyor */}
           <video 
             className="w-full h-full object-cover opacity-90"
             autoPlay 
@@ -61,7 +60,6 @@ export default function EgsenKalip() {
           >
           </video>
           
-          {/* Ekrandaki karizmatik yazılar (Senin istediğin o teknik hava) */}
           <div className="absolute top-6 left-6 z-20 font-mono text-[10px] text-orange-500 tracking-widest flex flex-col gap-1 bg-black/60 p-2 rounded border border-orange-500/30">
             <span className="text-white font-bold">FILE: WATCH_FACTORY_TOUR_V1</span>
             <span>REC // CNC_MILLING_01</span>
@@ -86,8 +84,8 @@ export default function EgsenKalip() {
           <div className="w-full md:w-1/2 aspect-square relative border border-white/10 overflow-hidden group">
             <div className="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-all z-10"></div>
             <div className="w-full h-full bg-[#111] flex items-center justify-center font-mono text-xs text-gray-600 relative">
-               <img src="/hakkimizda-vitrin.jpg" alt="Egsen Kalıp Vitrin" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
-               <span className="absolute z-20 mix-blend-difference text-white">AI_GÖRSEL_BEKLENİYOR: hakkimizda-vitrin.jpg</span>
+               <img src="/hakkimizda-vitrin.jpeg" alt="Egsen Kalıp Vitrin" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
+               <span className="absolute z-20 mix-blend-difference text-white">AI_GÖRSEL_BEKLENİYOR: hakkimizda-vitrin.jpeg</span>
             </div>
           </div>
         </div>
@@ -105,8 +103,8 @@ export default function EgsenKalip() {
                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                    
                    <div className="w-full h-full bg-[#151515] flex items-center justify-center font-mono text-[10px] text-gray-700 relative">
-                      <img src={`/cnc-modul-${item}.jpg`} alt={`CNC Modül ${item}`} className="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
-                      <span className="absolute z-20 top-1/2 text-center w-full mix-blend-difference text-white">cnc-modul-{item}.jpg</span>
+                      <img src={`/cnc-modul-${item}.jpeg`} alt={`CNC Modül ${item}`} className="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" onError={(e) => e.currentTarget.style.display = 'none'} />
+                      <span className="absolute z-20 top-1/2 text-center w-full mix-blend-difference text-white">cnc-modul-{item}.jpeg</span>
                    </div>
 
                    <div className="absolute bottom-4 left-4 z-20 text-left">
